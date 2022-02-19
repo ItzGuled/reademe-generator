@@ -28,12 +28,7 @@ const questions = [
   {
     type: "input",
     name: "table",
-    message: "What is the table of contents.",
-  },
-  {
-    type: "input",
-    name: "table",
-    message: "What is the table of contents?",
+    message: "Do you want a table of contents.",
   },
   {
     type: "input",
@@ -56,18 +51,9 @@ const questions = [
   {
     type: "input",
     name: "Contributing",
-    message: "What is the Contributing?",
+    message: "What is the Contribution?",
   },
-  {
-    type: "input",
-    name: "Tests",
-    message: "What is the tests?",
-  },
-  {
-    type: "input",
-    name: "Questions",
-    message: "What is the questions?",
-  },
+
 ];
 
 // TODO: Create a function to write README file
