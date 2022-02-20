@@ -91,14 +91,14 @@ const questions = [
     choices: ["MIT", "Apache", "GNU", "None"],
   },
   {
-    type: "input",
+    type: "confirm",
     name: "contributing",
-    message: "Do you want people to contribute?",
+    message: "How do you want people to contribute?",
     validate: (contInput) => {
       if (contInput) {
         return true;
       } else {
-        console.log("Please enter your contributors!");
+        console.log("Please enter your way of contribution!");
         return false;
       }
     },
@@ -118,7 +118,6 @@ const questions = [
   },
 ];
 
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
@@ -126,6 +125,19 @@ function writeToFile(fileName, data) {}
 function init() {
   prompt(questions).then((answers) => {
     console.log(genRead(answers));
+  });
+  return new Promise((resolve, reject) => {
+    fs.writeFile(`./src/${fileName}.md`, data, (err) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve({
+        ok: true,
+        message: "File created!",
+      });
+    });
   });
 }
 
