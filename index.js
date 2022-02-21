@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
-const { prompt } = require("inquirer");
-const genRead = require("./utils/generateMarkdown");
+const inquirer = require("inquirer");
+const generateMarkdown  = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -73,7 +73,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "Usage",
+    name: "usage",
     message: "What is the projects usage?",
     validate: (usageInput) => {
       if (usageInput) {
@@ -119,15 +119,9 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {
-  prompt(questions).then((answers) => {
-    console.log(genRead(answers));
-  });
+function writeToFile(fileName, data) {
   return new Promise((resolve, reject) => {
-    fs.writeFile(`./src/${fileName}.md`, data, (err) => {
+    fs.writeFile(fileName, data, err => {
       if (err) {
         reject(err);
         return;
@@ -140,6 +134,7 @@ function init() {
     });
   });
 }
-
+// TODO: Create a function to initialize app
+function init()
 // Function call to initialize app
 init();
