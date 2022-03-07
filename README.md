@@ -4,7 +4,7 @@
   [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  To make a generated reade me
+  This project is a read me generator.You use Node to input information to quickly make a professional read me for you projects on Github.
 
   ## Table of Contents
   
