@@ -30,3 +30,6 @@
 
   ## Questions
   Email me at ItzGuled55337@gmail.com
+
+  ## Walkthrough
+https://drive.google.com/file/d/1WoS8so_kZiJDmMnXn9LQoDN9pGV-08uO/view
